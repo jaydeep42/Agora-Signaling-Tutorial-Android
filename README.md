@@ -15,10 +15,10 @@
 - 注销信令登录
 
 Agora 信令 SDK 支持 iOS / Android / Web 等多个平台，你可以查看对应各平台的示例项目：
-Android: https://github.com/AgoraIO/Agora-Signaling-Tutorial-Android
-IOS      : https://github.com/AgoraIO/Agora-Signaling-Tutorial-iOS-Swift
-Web    : https://github.com/AgoraIO/Agora-Signaling-Tutorial-Web
-MacOS: https://github.com/AgoraIO/Agora-Signaling-Tutorial-macOS-Swift
+- Android: https://github.com/AgoraIO/Agora-Signaling-Tutorial-Android
+- IOS    : https://github.com/AgoraIO/Agora-Signaling-Tutorial-iOS-Swift
+- Web    : https://github.com/AgoraIO/Agora-Signaling-Tutorial-Web
+- MacOS  : https://github.com/AgoraIO/Agora-Signaling-Tutorial-macOS-Swift
 
 
 ## 运行示例程序

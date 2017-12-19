@@ -15,11 +15,10 @@ With this sample app, you can:
 - Logout signal server
 
 Agora Signal SDK supports iOS / Android / Web. You can find demos of these platform here:
-
-Android: https://github.com/AgoraIO/Agora-Signaling-Tutorial-Android
-IOS      : https://github.com/AgoraIO/Agora-Signaling-Tutorial-iOS-Swift
-Web    : https://github.com/AgoraIO/Agora-Signaling-Tutorial-Web
-MacOS: https://github.com/AgoraIO/Agora-Signaling-Tutorial-macOS-Swift
+- Android: https://github.com/AgoraIO/Agora-Signaling-Tutorial-Android
+- IOS    : https://github.com/AgoraIO/Agora-Signaling-Tutorial-iOS-Swift
+- Web    : https://github.com/AgoraIO/Agora-Signaling-Tutorial-Web
+- MacOS  : https://github.com/AgoraIO/Agora-Signaling-Tutorial-macOS-Swift
 
 
 ## Running the App
