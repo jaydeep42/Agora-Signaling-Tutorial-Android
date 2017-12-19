@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Agora Signaling Tutorial</string>
+
+    <string name="single_input">单行输入</string>
+    <string name="str_msg_single">点对点消息</string>
+    <string name="str_msg_channel">频道消息</string>
+    <string name="str_join_channe_failed">加入频道失败</string>
+    <string name="str_online">(在线)</string>
+    <string name="str_not_online">(不在线)</string>
+    <string name="str_msg_not_empty">The account is empty</string>
+    <string name="str_msg_not_128">The accout is no more than 128</string>
+    <string name="str_msg_not_contains_space">The accout contains space</string>
+    <string name="str_msg_cannot_yourself">The accout cannot be yourself</string>
+    <string name="str_msg_net_bad">Login Failed for the network is not available</string>
+
+</resources>
