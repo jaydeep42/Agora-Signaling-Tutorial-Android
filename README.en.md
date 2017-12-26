@@ -2,23 +2,26 @@
 
 *其他语言版本： [简体中文](README.md)*
 
-The Agora Android OpenDuo Sample App is an open-source demo that will help you get message chat integrated directly into your Android applications using the Agora Signal SDK.
+The Agora Android Signaling Tutorial is an open-source demo that will help you get message chat integrated directly into your Android applications using the Agora Signaling SDK.
 
 With this sample app, you can:
 
-- Login signal server
+- Login Signaling server
 - Inquire whether the calling object is online
 - Send point to point message and receive point to point message off line
 - Join channel
 - Send channel message, receive channel message
 - Leave channel
-- Logout signal server
+- Logout Signaling server
 
-Agora Signal SDK supports iOS / Android / Web. You can find demos of these platform here:
+Agora Signaling SDK supports iOS / Android / Web. You can find demos of these platform here:
+
 - Android: https://github.com/AgoraIO/Agora-Signaling-Tutorial-Android
-- IOS    : https://github.com/AgoraIO/Agora-Signaling-Tutorial-iOS-Swift
-- Web    : https://github.com/AgoraIO/Agora-Signaling-Tutorial-Web
-- MacOS  : https://github.com/AgoraIO/Agora-Signaling-Tutorial-macOS-Swift
+- Web : https://github.com/AgoraIO/Agora-Signaling-Tutorial-Web
+- MacOS : https://github.com/AgoraIO/Agora-Signaling-Tutorial-macOS-Swift
+- Linux : https://github.com/AgoraIO/Agora-Signaling-Tutorial-Linux
+- Java : https://github.com/AgoraIO/Agora-Signaling-Tutorial-Java
+- Windows: https://github.com/AgoraIO/Agora-Signaling-Tutorial-Windows
 
 
 ## Running the App
@@ -30,7 +33,19 @@ Update "app/src/main/res/values/strings_config.xml" with your App ID and App Cer
 <string name="agora_app_id"><#YOUR APP ID#></string>
 <string name="agora_app_certificate"><#YOUR APP Certificate#></string>
 ```
+## Integration mode
+- The first step is to download the signaling SDK in Agora.io SDK. After decompressing, copy the *.jar under the LIBS folder to the app/libs of this project. The arm64-v8a/x86/armeabi-v7a under the LIBS folder is copied to the app/src/main/libs of this project.
 
+- The second step: add the following code in the Android property of the "app/build.gradle" file in this project (the example is added in this code):
+
+ sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/libs']
+        }
+    }
+- The third step: add the following dependency in the "app/build.gradle" file dependency property of this project (the example is added in this code):
+
+  compile fileTree(dir: 'libs', include: ['*.jar'])
 
 
 Finally, open project with Android Studio, connect your Android device, build and run.
