@@ -16,7 +16,7 @@ With this sample app, you can:
 
 Agora Signaling SDK supports iOS / Android / Web. You can find demos of these platform here:
 
-- Android: https://github.com/AgoraIO/Agora-Signaling-Tutorial-Android
+- iOS : https://github.com/AgoraIO/Agora-Signaling-Tutorial-iOS-Swift
 - Web : https://github.com/AgoraIO/Agora-Signaling-Tutorial-Web
 - MacOS : https://github.com/AgoraIO/Agora-Signaling-Tutorial-macOS-Swift
 - Linux : https://github.com/AgoraIO/Agora-Signaling-Tutorial-Linux

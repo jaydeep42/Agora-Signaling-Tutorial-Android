@@ -6,7 +6,7 @@
 
 在这个示例项目中包含了以下功能：
 
-- 登录信服务器
+- 登录信令服务器
 - 查询点对点聊天对象是否在线
 - 发送点对点消息，离线接收点对点消息
 - 加入频道
@@ -15,7 +15,8 @@
 - 注销信令登录
 
 Agora 信令 SDK 支持 iOS / Android / Web 等多个平台，你可以查看对应各平台的示例项目：
-- Android: https://github.com/AgoraIO/Agora-Signaling-Tutorial-Android
+
+- iOS : https://github.com/AgoraIO/Agora-Signaling-Tutorial-iOS-Swift
 - Web : https://github.com/AgoraIO/Agora-Signaling-Tutorial-Web
 - MacOS : https://github.com/AgoraIO/Agora-Signaling-Tutorial-macOS-Swift
 - Linux : https://github.com/AgoraIO/Agora-Signaling-Tutorial-Linux
@@ -34,16 +35,16 @@ Agora 信令 SDK 支持 iOS / Android / Web 等多个平台，你可以查看对
 ```
 
 ## 集成方式
-- 第一步: 在 Agora.io SDK 下载信令 SDK，解压后将其中的 libs 文件夹下的 *.jar 复制到本项目的 app/libs 下，其中的 libs 文件夹下的 arm64-v8a/x86/armeabi-v7a 复制到本项目的 app/src/main/libs 下。
+- 第1步: 在 Agora.io SDK 下载信令 SDK，解压后将其中的 libs 文件夹下的 *.jar 复制到本项目的 app/libs 下，其中的 libs 文件夹下的 arm64-v8a/x86/armeabi-v7a 复制到本项目的 app/src/main/libs 下。
 
-- 第二步: 在本项目的 "app/build.gradle" 文件的 android 属性中添加如下代码 （此处代码中已添加示例）：
+- 第2步: 在本项目的 "app/build.gradle" 文件的 android 属性中添加如下代码 （此处代码中已添加示例）：
 
  sourceSets {
         main {
             jniLibs.srcDirs = ['src/main/libs']
         }
     }
-- 第三步: 在本项目的 "app/build.gradle" 文件依赖属性中添加如下依赖关系（此处代码中已添加示例）：
+- 第3步: 在本项目的 "app/build.gradle" 文件依赖属性中添加如下依赖关系（此处代码中已添加示例）：
 
   compile fileTree(dir: 'libs', include: ['*.jar'])
 
