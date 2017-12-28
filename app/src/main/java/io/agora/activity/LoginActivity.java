@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
 import java.lang.ref.WeakReference;
 
 import io.agora.AgoraAPI;
@@ -17,7 +18,6 @@ import io.agora.sginatutorial.AGApplication;
 import io.agora.sginatutorial.R;
 import io.agora.utils.Constant;
 import io.agora.utils.ToastUtils;
-import io.agora.utils.TokenUtils;
 
 
 public class LoginActivity extends Activity {
@@ -26,7 +26,6 @@ public class LoginActivity extends Activity {
     private EditText textAccountName;
     private TextView textViewVersion;
     private String appId;
-    private String appCertificate;
 
     private String account;
     private boolean enableLoginBtnClick = true;
@@ -38,7 +37,6 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
 
         appId = getString(R.string.agora_app_id);
-        appCertificate = getString(R.string.agora_app_certificate);
 
         textAccountName = (EditText) findViewById(R.id.account_name);
         textViewVersion = (TextView) findViewById(R.id.login_version);
@@ -63,9 +61,7 @@ public class LoginActivity extends Activity {
             } else {
                 enableLoginBtnClick = false;
 
-                long expiredTime = System.currentTimeMillis() / 1000 + 3600;
-                String token = TokenUtils.calcToken(appId, appCertificate, account, expiredTime);
-                AGApplication.the().getmAgoraAPI().login2(appId, account, token, 0, "", 5, 1);
+                AGApplication.the().getmAgoraAPI().login2(appId, account, "_no_need_token", 0, "", 5, 1);
             }
         }
 

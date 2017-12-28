@@ -134,7 +134,6 @@ public class MessageActivity extends Activity {
             }
 
 
-
             @Override
             public void onQueryUserStatusResult(final String name, final String status) {
                 Log.i(TAG, "onQueryUserStatusResult  name = " + name + "  status = " + status);

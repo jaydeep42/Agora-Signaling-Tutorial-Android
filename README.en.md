@@ -26,12 +26,11 @@ Agora Signaling SDK supports iOS / Android / Web. You can find demos of these pl
 
 ## Running the App
 First, create a developer account at [Agora.io](https://dashboard.agora.io/signin/), and obtain an App ID.
-Then select the editor in the test project, click App Certificate, and get the App Certificate according to the operation.
-Update "app/src/main/res/values/strings_config.xml" with your App ID and App Certificate.
+Update "app/src/main/res/values/strings_config.xml" with your App ID .
 
 ```
 <string name="agora_app_id"><#YOUR APP ID#></string>
-<string name="agora_app_certificate"><#YOUR APP Certificate#></string>
+
 ```
 ## Integration mode
 - The first step is to download the signaling SDK in Agora.io SDK. After decompressing, copy the *.jar under the LIBS folder to the app/libs of this project. The arm64-v8a/x86/armeabi-v7a under the LIBS folder is copied to the app/src/main/libs of this project.
