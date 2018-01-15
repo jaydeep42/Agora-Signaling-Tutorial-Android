@@ -46,13 +46,13 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MyViewHo
 
     @Override
     public int getItemCount() {
-        System.out.println("yttest messageBeanList.size() :" + messageBeanList.size());
+
         return messageBeanList.size();
     }
 
 
     private void setupView(MyViewHolder holder, int position) {
-        System.out.println("yttest position :" + position);
+
         MessageBean bean = messageBeanList.get(position);
         if (bean.isBeSelf()) {
             holder.textViewSelfName.setText(bean.getAccount());

@@ -47,6 +47,7 @@ public class MessageActivity extends Activity {
     private String channelName = "";
     private String selfName = "";
     private boolean stateSingleMode = true; // single mode or channel mode
+    private int channelUserCount;
 
 
     @Override
@@ -76,7 +77,8 @@ public class MessageActivity extends Activity {
         channelName = intent.getStringExtra("name");
         selfName = intent.getStringExtra("selfname");
         stateSingleMode = intent.getBooleanExtra("mode", true);
-        textViewTitle.setText(channelName);
+        channelUserCount = intent.getIntExtra("usercount", 0);
+        textViewTitle.setText(channelName + "(" + channelUserCount + ")");
 
         if (stateSingleMode) {
             MessageListBean messageListBean = Constant.getExistMesageListBean(channelName);
@@ -109,6 +111,29 @@ public class MessageActivity extends Activity {
 
         agoraAPI.callbackSet(new AgoraAPI.CallBack() {
 
+            @Override
+            public void onChannelUserJoined(String account, int uid) {
+                super.onChannelUserJoined(account, uid);
+                channelUserCount++;
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        textViewTitle.setText(channelName + "(" + channelUserCount + ")");
+                    }
+                });
+            }
+
+            @Override
+            public void onChannelUserLeaved(String account, int uid) {
+                super.onChannelUserLeaved(account, uid);
+                channelUserCount--;
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        textViewTitle.setText(channelName + "(" + channelUserCount + ")");
+                    }
+                });
+            }
 
             @Override
             public void onLogout(final int i) {

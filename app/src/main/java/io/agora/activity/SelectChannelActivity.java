@@ -136,17 +136,6 @@ public class SelectChannelActivity extends Activity {
             public void onChannelJoined(String channelID) {
                 super.onChannelJoined(channelID);
 
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Intent intent = new Intent(SelectChannelActivity.this, MessageActivity.class);
-                        intent.putExtra("mode", stateSingleMode);
-                        intent.putExtra("name", otherName);
-                        intent.putExtra("selfname", selfAccount);
-                        startActivity(intent);
-
-                    }
-                });
             }
 
             @Override
@@ -158,6 +147,24 @@ public class SelectChannelActivity extends Activity {
                     public void run() {
                         enableChannelBtnClick = true;
                         ToastUtils.show(new WeakReference<Context>(SelectChannelActivity.this), getString(R.string.str_join_channe_failed));
+                    }
+                });
+            }
+
+            @Override
+            public void onChannelUserList(String[] accounts, final int[] uids) {
+                super.onChannelUserList(accounts, uids);
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(SelectChannelActivity.this, MessageActivity.class);
+                        intent.putExtra("mode", stateSingleMode);
+                        intent.putExtra("name", otherName);
+                        intent.putExtra("selfname", selfAccount);
+                        intent.putExtra("usercount", uids.length);
+                        startActivity(intent);
+
                     }
                 });
             }
