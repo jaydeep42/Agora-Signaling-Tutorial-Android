@@ -37,7 +37,7 @@
         android:paddingRight="20dp"
         android:textColor="@color/white"
         android:background="@color/blue"
-        android:text="chat" />
+        android:text="@string/str_chat" />
 
     <EditText
         android:id="@+id/select_channel_edittiext"
@@ -45,7 +45,7 @@
         android:layout_height="40dp"
         android:layout_below="@+id/select_channel_title"
         android:layout_toLeftOf="@+id/select_channel_button"
-        android:hint="Friend's name"
+        android:hint="@string/str_friend"
         android:layout_marginLeft="40dp"
         android:layout_marginBottom="25dp"
         android:layout_marginTop="40dp"

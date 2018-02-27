@@ -116,13 +116,13 @@ public class SelectChannelActivity extends Activity {
 
         if (stateSingleMode) {
             textViewTitle.setText(getString(R.string.str_msg_single));
-            textViewButton.setText("chat");
-            edittextName.setHint("Friend's name");
+            textViewButton.setText(getString(R.string.str_chat));
+            edittextName.setHint(getString(R.string.str_friend));
 
         } else {
             textViewTitle.setText(getString(R.string.str_msg_channel));
-            textViewButton.setText("join");
-            edittextName.setHint("channel name");
+            textViewButton.setText(getString(R.string.str_join));
+            edittextName.setHint(getString(R.string.str_channel));
 
         }
 

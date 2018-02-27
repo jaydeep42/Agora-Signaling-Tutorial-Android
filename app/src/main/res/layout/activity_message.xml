@@ -34,7 +34,7 @@
         android:paddingRight="20dp"
         android:textColor="@color/white"
         android:background="@color/blue"
-        android:text="send" />
+        android:text="@string/str_send" />
     <EditText
         android:id="@+id/message_edittiext"
         android:layout_width="match_parent"
